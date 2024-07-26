@@ -10,7 +10,7 @@ node{
    }
     stage('SonarQube Analysis') {
 	        def mvnHome =  tool name: 'maven3', type: 'maven'
-	        withSonarQubeEnv('sonar') { 
+	        withSonarQubeEnv('sonarqube') { 
 	          sh "${mvnHome}/bin/mvn sonar:sonar"
 	        }
 	    }
